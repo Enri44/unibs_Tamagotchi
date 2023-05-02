@@ -1,4 +1,4 @@
-import it.kibo.fp.lib.*;
+import mylib.*;
 
 /**
  * Classe che inizializza subito un menu di opzioni di cosa fare

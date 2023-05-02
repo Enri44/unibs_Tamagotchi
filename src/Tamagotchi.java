@@ -1,4 +1,4 @@
-import it.kibo.fp.lib.*;
+import mylib.*;
 public class Tamagotchi {
     private final String nome;
     private double sazieta;

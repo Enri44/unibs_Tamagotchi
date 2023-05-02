@@ -1,4 +1,4 @@
-import it.kibo.fp.lib.*;
+import mylib.*;
 
 /**
  * Classe che contiene tutte le costanti utili nel programma e
@@ -28,7 +28,7 @@ public abstract class Utility {
     }
 
     /**
-     * Stapa un saluto abbellito e colorato
+     * Stampa un saluto abbellito e colorato
      */
     public static void stampa_saluto(){
         System.out.println(AnsiColors.BLUE + PrettyStrings.frame(SALUTO, SALUTO.length(), false, true) + AnsiColors.RESET);
