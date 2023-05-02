@@ -1,9 +1,9 @@
 package mylib;
 
-import it.kibo.fp.lib.AnsiColors;
-import it.kibo.fp.lib.InputData;
-import it.kibo.fp.lib.KnownProblems;
-import it.kibo.fp.lib.PrettyStrings;
+import mylib.AnsiColors;
+import mylib.InputData;
+import mylib.KnownProblems;
+import mylib.PrettyStrings;
 
 import java.io.Serializable;
 
@@ -97,7 +97,7 @@ public class Menu implements Serializable {
   private void printMenu() {
     StringBuffer menu = new StringBuffer();
 
-    menu.append(it.kibo.fp.lib.PrettyStrings.frame(title, frameLength, centredTitle, useVerticalFrame));
+    menu.append(mylib.PrettyStrings.frame(title, frameLength, centredTitle, useVerticalFrame));
 
     for (int i = 0; i < entries.length; i++)
       menu.append(i != entries.length - 1 ? String.format("%d. %s\n", (i + 1), entries[i])
@@ -118,7 +118,7 @@ public class Menu implements Serializable {
     printMenu();
 
     if (useExitEntry)
-      return it.kibo.fp.lib.InputData.readIntegerBetween(INSERT_REQUEST, 0, entries.length);
+      return mylib.InputData.readIntegerBetween(INSERT_REQUEST, 0, entries.length);
     else
       return InputData.readIntegerBetween(INSERT_REQUEST, 1, entries.length);
   }

@@ -1,6 +1,6 @@
 package mylib;
 
-import it.kibo.fp.lib.AnsiColors;
+import mylib.AnsiColors;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
