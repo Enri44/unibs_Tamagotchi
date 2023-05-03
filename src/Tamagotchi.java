@@ -4,6 +4,8 @@ public class Tamagotchi {
     private double sazieta;
     private double soddisfazione;
     private boolean vita;//serve solo per controllare se chiudere il programma
+    
+    
     public Tamagotchi(String nome, double sazieta, double soddisfazione) {
         this.nome = nome;
         this.sazieta = sazieta;
@@ -13,6 +15,18 @@ public class Tamagotchi {
 
     public boolean isVita() {
         return vita;
+    }
+    //Metodi per i test forniti dal prof.
+    public boolean sonoMorto() {
+        return !(this.vita);
+    }
+    
+    public boolean sonoTriste() {
+    	if (this.sazieta <= Utility.LIV_INFELICITA || this.soddisfazione <= Utility.LIV_INFELICITA || this.sazieta >= Utility.LIV_NAUSEA) {
+    		return true;
+    	}else {
+    		return false;
+    	}
     }
 
     /**
