@@ -12,7 +12,7 @@ public class TamaTestMatricole
 	{
 		final Tamagotchi tama = new Tamagotchi("Kira", 50, 0);
 		tama.controllo_condizioni();
-		assertTrue(tama.sonoMorto());
+		assertTrue(!tama.isVita());
 	}
 	
 	@Test
@@ -20,7 +20,7 @@ public class TamaTestMatricole
 	{
 		final Tamagotchi tama = new Tamagotchi("Kira", 0, 50);
 		tama.controllo_condizioni();
-		assertTrue(tama.sonoMorto());
+		assertTrue(!tama.isVita());
 	}
 	
 	@Test
@@ -28,7 +28,7 @@ public class TamaTestMatricole
 	{
 		final Tamagotchi tama = new Tamagotchi("Kira", 50, 50);
 		tama.controllo_condizioni();
-		assertFalse(tama.sonoMorto());
+		assertTrue(tama.isVita());
 	}
 /****	
 	@Test(expected=IllegalArgumentException.class)
@@ -92,7 +92,7 @@ public class TamaTestMatricole
 		final Tamagotchi tama = new Tamagotchi("Kira", 99, 50);
 		tama.ricevi_biscotti(10);
 		tama.controllo_condizioni();
-		boolean res=tama.sonoMorto();
+		boolean res=!tama.isVita();
 		assertTrue(res);
 	}
 	

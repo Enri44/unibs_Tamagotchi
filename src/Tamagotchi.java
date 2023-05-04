@@ -13,20 +13,28 @@ public class Tamagotchi {
         this.vita = true;//è vivo all'inizio
     }
 
+    /**
+     * @return se il Tamagotchi è vivo o morto
+     */
     public boolean isVita() {
         return vita;
     }
+
     //Metodi per i test forniti dal prof.
-    public boolean sonoMorto() {
-        return !(this.vita);
-    }
-    
+
+    /**
+     * @return se il Tamagotchi supera i livelli d'infelicità delle sue condizioni
+     */
     public boolean sonoTriste() {
-    	if (this.sazieta <= Utility.LIV_INFELICITA || this.soddisfazione <= Utility.LIV_INFELICITA || this.sazieta >= Utility.LIV_NAUSEA) {
-    		return true;
-    	}else {
-    		return false;
-    	}
+        return this.sazieta <= Utility.LIV_INFELICITA || this.soddisfazione <= Utility.LIV_INFELICITA || this.sazieta >= Utility.LIV_NAUSEA;
+    }
+
+    /**
+     * @return se il Tamagotchi supera i livelli ottimali delle sue condizioni
+     */
+    public boolean sonoMoltoFelice() {
+        //ritorna se il tama si trova nelle condizioni ottimali
+        return this.sazieta >= Utility.LIV_OTTIMALE && this.soddisfazione >= Utility.LIV_OTTIMALE;
     }
 
     /**
@@ -64,15 +72,15 @@ public class Tamagotchi {
         else {
             System.out.println(this);
             String messaggio =(nome + ":\"");
-            if (sazieta <= Utility.LIV_INFELICITA || soddisfazione <= Utility.LIV_INFELICITA || sazieta >= Utility.LIV_NAUSEA) {
+            if (sonoTriste()) {
                 messaggio += ("Sono triste");
                 if (sazieta >= Utility.LIV_NAUSEA) {
                     messaggio += (" perché mi hai fatto mangiare troppo");
                 }
-            } else if (sazieta >= Utility.LIV_FELICITA && soddisfazione >= Utility.LIV_FELICITA) {
+            } else if (sonoMoltoFelice()) {
                 messaggio += ("Sto benissimo");
             } else {
-                messaggio += ("Tutto ok");
+                messaggio += ("Sono felice");
             }
             messaggio += "\"";
             System.out.println(messaggio);

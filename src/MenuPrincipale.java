@@ -7,7 +7,12 @@ import mylib.*;
  */
 public class MenuPrincipale {
     private final String[] opzioni = {"Nutri", "Accarezza"};//le due scelte del menu da inserire in esso
-    Menu menu = new Menu("Cosa vuoi fare con tuo figlio?", opzioni, true, true, true);
+    /*
+     * La classe Menu importata richiede un titolo, una
+     * lista di opzioni, se usare l'exit, se centrare il
+     * titolo e se usare anche la parte verticale della cornice
+     */
+    Menu menu = new Menu("Cosa vuoi fare col tuo animaletto?", opzioni, true, true, true);
 
     public MenuPrincipale() {
     }

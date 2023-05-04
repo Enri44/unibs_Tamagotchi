@@ -8,7 +8,7 @@ public abstract class Utility {
     public static final int LIV_MAX_SODDISFAZIONE = 100;
     public static final int LIV_MAX_SAZIETA = 100;
     public static final int LIV_MIN_SAZIETA_SODDISFAZIONE = 0;//la costante è la stessa perché non avrebbe senso un tamagotchi con sazietà e soddisfazione negativi
-    public static final int LIV_FELICITA = 75;
+    public static final int LIV_OTTIMALE = 75;//livello ottimale oltre il quale il tama al massimo della felicita
     public static final int LIV_INFELICITA = 30;
     public static final int LIV_NAUSEA = 90;//sopra a questo valore il tama è triste perché ha mangiato troppo
     public static final int MAX_BISCOTTI = 5;
@@ -16,7 +16,7 @@ public abstract class Utility {
     public static final String SALUTO = "BENVENUTO NEL FANTASTICO MONDO DEI TAMAGOTCHI!!";
 
     /**
-     * Crea un Tamagotchi chiedendo all'utente le sue caratteristiche all'inizio del programma
+     * Crea un Tamagotchi chiedendo all'utente le sue caratteristiche di partenza
      * @return il Tamagotchi creato
      */
     public static Tamagotchi crea_tamagotchi(){
